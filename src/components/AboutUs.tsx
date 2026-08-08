@@ -23,7 +23,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({ t }) => {
         {/* 2 Centered Paragraphs */}
         <div className="space-y-6 text-gray-200 font-serif text-base sm:text-lg leading-relaxed max-w-3xl mx-auto text-justify sm:text-center">
           <p>
-            Hope The Organizer is an event organizer company with a long journey of growth and experience, evolving from a trade business established in the early 2000s into a professional event management company. Led by Martin Teguh A.S., HOPE has developed a solid and loyal team dedicated to delivering high-quality services.
+            Hope The Organizer is an event organizer company with a long journey of growth and experience, evolving from a trade business established in the early 2000s into a professional event management company. HOPE has developed a solid and loyal team dedicated to delivering high-quality services.
           </p>
           <p>
             The company continues to grow by focusing on professionalism, creativity, and strong teamwork, allowing them to handle various types of events and build long-term relationships with clients. Their experience and consistency have shaped HOPE into a trusted organizer in the industry.

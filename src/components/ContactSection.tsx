@@ -257,9 +257,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ t }) => {
           <h2 className="font-serif italic text-4xl sm:text-5xl font-bold text-white tracking-wide">
             {t.contact.heading} <span className="text-[#ffcb04]">{t.contact.headingHighlight}</span>
           </h2>
-          <p className="text-gray-400 font-serif text-sm mt-2">
-            {t.contact.ledBy} <span className="text-[#ffcb04] font-semibold">Martin Teguh Ahadi S.</span>
-          </p>
         </div>
 
         {/* Contact Form Card */}

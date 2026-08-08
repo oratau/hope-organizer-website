@@ -1,0 +1,25 @@
+# Ignore development server (not used in production)
+server/
+
+# Ignore development files
+.env
+.env.local
+*.log
+
+# Ignore source files (only dist is needed)
+src/
+
+# Ignore documentation
+*.md
+!README.md
+
+# Ignore development tools
+.vscode/
+.git/
+node_modules/
+
+# Ignore test files
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx

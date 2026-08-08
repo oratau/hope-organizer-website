@@ -1,8 +1,24 @@
 {
   "rewrites": [
-    { "source": "/api/contact/send-otp", "destination": "/api/contact-send-otp" },
-    { "source": "/api/contact/verify-otp", "destination": "/api/contact-verify-otp" },
-    { "source": "/api/contact", "destination": "/api/contact" },
-    { "source": "/api/articles", "destination": "/api/articles" }
+    {
+      "source": "/api/contact/send-otp",
+      "destination": "/api/contact-send-otp"
+    },
+    {
+      "source": "/api/contact/verify-otp",
+      "destination": "/api/contact-verify-otp"
+    },
+    {
+      "source": "/api/contact",
+      "destination": "/api/contact"
+    },
+    {
+      "source": "/api/articles",
+      "destination": "/api/articles"
+    },
+    {
+      "source": "/((?!api|assets|fonts|_next|favicon.ico).*)",
+      "destination": "/index.html"
+    }
   ]
 }

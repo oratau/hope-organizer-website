@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/api/contact/send-otp",
+      "destination": "/api/contact-send-otp"
+    },
+    {
+      "source": "/api/contact/verify-otp",
+      "destination": "/api/contact-verify-otp"
+    },
+    {
+      "source": "/api/contact",
+      "destination": "/api/contact"
+    },
+    {
+      "source": "/api/articles",
+      "destination": "/api/articles"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}

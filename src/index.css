@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------------------------------------------------
+ * LOCAL FONT FACE DEFINITIONS (Custom Serif Font Suite Uploaded by User)
+ * ------------------------------------------------------------- */
+
+/* 1. Argent CF */
+@font-face {
+  font-family: 'Argent CF';
+  src: url('/fonts/ArgentCF-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 2. Masvis Regular */
+@font-face {
+  font-family: 'Masvis';
+  src: url('/fonts/Masvis.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* -------------------------------------------------------------
+ * GLOBAL SERIF TYPOGRAPHY ENFORCEMENT (STRICTLY NO SANS-SERIF)
+ * ------------------------------------------------------------- */
+
+:root {
+  --navy: #192b58;
+  --gold: #ffcb04;
+  --bg-dark: #0a0a0a;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  font-family: 'Argent CF', 'Masvis', 'Playfair Display', 'Times New Roman', Georgia, serif !important;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Clean transparent default for buttons */
+button {
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+}
+
+/* -------------------------------------------------------------
+ * INFINITE MARQUEE ANIMATION FOR TRUSTED BY LOGO STRIP
+ * ------------------------------------------------------------- */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 60s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Specific Custom Serif Utility Classes */
+.font-playfair {
+  font-family: 'Playfair Display', 'Argent CF', serif !important;
+}
+
+.font-argent {
+  font-family: 'Argent CF', 'Masvis', serif !important;
+}
+
+.font-timescg {
+  font-family: 'Times New Roman', 'Times CG', serif !important;
+}
+
+.font-masvis {
+  font-family: 'Masvis', 'Argent CF', serif !important;
+}
+
+/* Section Title Highlight Boxes */
+.title-box-navy {
+  background-color: #192b58;
+  color: #ffffff;
+  font-family: 'Argent CF', 'Playfair Display', serif;
+  padding: 0.75rem 2.5rem;
+  display: inline-block;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.title-box-gold {
+  background-color: #ffcb04;
+  color: #0a0a0a;
+  font-family: 'Argent CF', 'Playfair Display', serif;
+  padding: 0.75rem 2.5rem;
+  display: inline-block;
+  box-shadow: 0 10px 30px rgba(255, 203, 4, 0.2);
+}
+
+/* Glassmorphism & Borders */
+.contact-card-border {
+  border: 2px solid #ffcb04;
+  background-color: rgba(10, 10, 10, 0.85);
+  box-shadow: 0 0 25px rgba(255, 203, 4, 0.15);
+}
+
+.pill-contact-item {
+  background-color: #192b58;
+  border: 1px solid rgba(255, 203, 4, 0.3);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.pill-contact-item:hover {
+  border-color: #ffcb04;
+  transform: translateY(-2px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #192b58;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffcb04;
+}

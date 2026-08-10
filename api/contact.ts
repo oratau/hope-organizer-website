@@ -74,114 +74,66 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         to: email,
         subject: 'Thank you for contacting HOPE The Organizer!',
         html: `
-          <!DOCTYPE html>
-          <html>
-          <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          </head>
-          <body style="margin: 0; padding: 0; background-color: #000000; font-family: Georgia, 'Times New Roman', serif;">
-            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #000000;">
-              <tr>
-                <td align="center" style="padding: 0;">
-                  <!-- Main Container with Pattern Background -->
-                  <table width="826" cellpadding="0" cellspacing="0" border="0" style="max-width: 826px; width: 100%; background-color: #000000; background-image: url('${baseUrl}/assets/email/hope%20pattern.png'); background-repeat: no-repeat; background-size: cover; background-position: center; opacity: 1;">
-                    <!-- Overlay for opacity effect -->
-                    <tr>
-                      <td style="background-color: rgba(0, 0, 0, 0.5); width: 100%;">
-                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                    
-                    <!-- Logo Section -->
-                    <tr>
-                      <td align="center" style="padding: 60px 60px 40px 60px;">
-                        <img src="${baseUrl}/assets/email/logo-white.png" alt="HOPE The Organizer" style="height: 60px; max-width: 280px; display: block;" />
-                      </td>
-                    </tr>
-                    
-                    <!-- Title -->
-                    <tr>
-                      <td style="padding: 0 70px 12px 70px;">
-                        <h1 style="margin: 0; font-size: 46px; font-weight: normal; color: #ffd700; font-family: Georgia, 'Times New Roman', serif; line-height: 1.2;">
-                          Hello, ${name}
-                        </h1>
-                      </td>
-                    </tr>
-                    
-                    <!-- Subtitle -->
-                    <tr>
-                      <td style="padding: 0 70px 40px 70px;">
-                        <p style="margin: 0; font-size: 18px; color: #ffffff; font-family: Georgia, 'Times New Roman', serif; line-height: 1.4; font-weight: normal;">
-                          Thank you For Contacting Us,<br>
-                          We Will Reply<br>
-                          Within 24 Hours.
-                        </p>
-                      </td>
-                    </tr>
-                    
-                    <!-- Content Area with Mascot and Message Box -->
-                    <tr>
-                      <td style="padding: 0 70px 40px 70px;">
-                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                          <tr>
-                            <!-- Left: Mascot -->
-                            <td width="45%" style="vertical-align: top; padding-right: 20px;">
-                              <img src="${baseUrl}/assets/email/mascotHappy.png" alt="HOPE Mascot" style="width: 100%; max-width: 280px; height: auto; display: block;" />
-                            </td>
-                            <!-- Right: Message Box -->
-                            <td width="55%" style="vertical-align: top;">
-                              <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                <tr>
-                                  <td style="padding-bottom: 12px;">
-                                    <p style="margin: 0; font-size: 16px; color: #ffffff; font-family: Georgia, 'Times New Roman', serif; font-weight: normal;">
-                                      Your Message:
-                                    </p>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #192b58;">
-                                      <tr>
-                                        <td style="padding: 25px 20px;">
-                                          <p style="margin: 0; font-size: 14px; color: #ffffff; font-family: Georgia, 'Times New Roman', serif; line-height: 1.6; word-wrap: break-word;">
-                                            ${message}
-                                          </p>
-                                        </td>
-                                      </tr>
-                                    </table>
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                    
-                    <!-- Contact Info Box -->
-                    <tr>
-                      <td style="padding: 0 70px 0 70px;">
-                        <img src="${baseUrl}/assets/email/ContactInformation.png" alt="Contact Information" style="width: 100%; max-width: 686px; display: block; height: auto;" />
-                      </td>
-                    </tr>
-                    
-                    <!-- Footer with Gradient -->
-                    <tr>
-                      <td align="center" style="padding: 55px 40px 65px 40px; background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #192b58 35%, #192b58 100%);">
-                        <p style="margin: 0; font-size: 18px; color: #ffffff; font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-weight: normal;">
-                          Best Regards, HOPE Organizer.
-                        </p>
-                      </td>
-                    </tr>
-                    
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-          </body>
-          </html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin: 0; padding: 0; background-color: #000000;">
+  <div style="width: 100%; background-color: #000000; background-image: url('${baseUrl}/assets/email/hope%20pattern.png'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 40px 20px;">
+    <div style="max-width: 700px; margin: 0 auto; background-color: rgba(0, 0, 0, 0.5); padding: 40px;">
+      
+      <!-- Logo -->
+      <div style="text-align: center; margin-bottom: 40px;">
+        <img src="${baseUrl}/assets/email/logo-white.png" alt="HOPE The Organizer" style="height: 60px; max-width: 280px;" />
+      </div>
+      
+      <!-- Title -->
+      <h1 style="margin: 0 0 15px 0; font-size: 46px; font-weight: normal; color: #ffd700; font-family: Georgia, 'Times New Roman', serif;">
+        Hello, ${name}
+      </h1>
+      
+      <!-- Subtitle -->
+      <p style="margin: 0 0 40px 0; font-size: 18px; color: #ffffff; font-family: Georgia, 'Times New Roman', serif; line-height: 1.5;">
+        Thank you For Contacting Us,<br>
+        We Will Reply<br>
+        Within 24 Hours.
+      </p>
+      
+      <!-- Content Area -->
+      <div style="display: table; width: 100%; margin-bottom: 40px;">
+        <div style="display: table-cell; width: 45%; vertical-align: top; padding-right: 20px;">
+          <img src="${baseUrl}/assets/email/mascotHappy.png" alt="HOPE Mascot" style="width: 100%; max-width: 280px; height: auto;" />
+        </div>
+        <div style="display: table-cell; width: 55%; vertical-align: top;">
+          <p style="margin: 0 0 12px 0; font-size: 16px; color: #ffffff; font-family: Georgia, 'Times New Roman', serif;">
+            Your Message:
+          </p>
+          <div style="background-color: #192b58; padding: 25px 20px;">
+            <p style="margin: 0; font-size: 14px; color: #ffffff; font-family: Georgia, 'Times New Roman', serif; line-height: 1.6; word-wrap: break-word;">
+              ${message}
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contact Info -->
+      <div style="margin-bottom: 40px;">
+        <img src="${baseUrl}/assets/email/ContactInformation.png" alt="Contact Information" style="width: 100%; max-width: 686px; height: auto;" />
+      </div>
+      
+      <!-- Footer -->
+      <div style="text-align: center; padding: 30px 0; background: linear-gradient(to bottom, transparent 0%, #192b58 50%);">
+        <p style="margin: 0; font-size: 18px; color: #ffffff; font-family: Georgia, 'Times New Roman', serif; font-style: italic;">
+          Best Regards, HOPE Organizer.
+        </p>
+      </div>
+      
+    </div>
+  </div>
+</body>
+</html>
         `,
       });
     } catch (err) {

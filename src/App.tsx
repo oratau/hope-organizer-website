@@ -7,7 +7,6 @@ import { BusinessFields } from './components/BusinessFields';
 import { AboutUs } from './components/AboutUs';
 import { OurVision } from './components/OurVision';
 import { OurMission } from './components/OurMission';
-import { OurStructure } from './components/OurStructure';
 import { ContactSection } from './components/ContactSection';
 import { NotFound } from './components/NotFound';
 import { Lang, translations } from './i18n';
@@ -106,7 +105,7 @@ export const App: React.FC = () => {
         history.replaceState(null, '', window.location.pathname);
       } else if (hash && hash !== '') {
         // If there's a hash but it's not recognized, show 404
-        const validHashes = ['', '#home', '#about-us', '#our-vision', '#our-mission', '#our-structure', '#business-fields', '#contact-us', '#trusted-by'];
+        const validHashes = ['', '#home', '#about-us', '#our-vision', '#our-mission', '#business-fields', '#contact-us', '#trusted-by'];
         if (!validHashes.includes(hash)) {
           setShow404(true);
         }
@@ -307,7 +306,6 @@ export const App: React.FC = () => {
       {activeTab === 'about-us' && <AboutUs t={t} />}
       {activeTab === 'our-vision' && <OurVision t={t} />}
       {activeTab === 'our-mission' && <OurMission t={t} />}
-      {activeTab === 'our-structure' && <OurStructure t={t} />}
       {activeTab === 'business-fields' && <BusinessFields t={t} />}
       {activeTab === 'contact-us' && <ContactSection t={t} />}
       {activeTab === 'trusted-by' && (

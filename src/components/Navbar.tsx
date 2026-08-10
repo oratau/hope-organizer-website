@@ -3,7 +3,7 @@ import { Logo } from './Logo';
 import { Menu, X } from 'lucide-react';
 import { Lang, translations } from '../i18n';
 
-export type NavTab = 'home' | 'about-us' | 'our-vision' | 'our-mission' | 'our-structure' | 'business-fields' | 'contact-us' | 'trusted-by';
+export type NavTab = 'home' | 'about-us' | 'our-vision' | 'our-mission' | 'business-fields' | 'contact-us' | 'trusted-by';
 
 interface NavbarProps {
   activeTab: NavTab;
@@ -79,9 +79,6 @@ export const Navbar: React.FC<NavbarProps> = ({
             {/* Right 5 Columns: Our Structure, Business Fields, Contact Us + EN|ID */}
             <div className="col-span-5 flex items-center justify-between pl-4">
               <nav className="flex items-center gap-6 xl:gap-8 font-serif text-xs xl:text-sm font-bold tracking-wide">
-                <button type="button" onClick={() => handleTabClick('our-structure')} className={navLinkClass('our-structure')}>
-                  {t.nav.ourStructure}
-                </button>
                 <button type="button" onClick={() => handleTabClick('business-fields')} className={navLinkClass('business-fields')}>
                   {t.nav.businessFields}
                 </button>

@@ -218,8 +218,11 @@ const sendOtpEmail = async (toEmail: string, toName: string, otp: string): Promi
         <tr>
           <td align="center" style="padding: 0;">
             <!-- Main Container with Pattern Background -->
-            <table width="826" cellpadding="0" cellspacing="0" border="0" style="max-width: 826px; width: 100%; background-color: #000000; background-image: url('${baseUrl}/assets/email/hope%20pattern.png'); background-repeat: repeat; background-size: 250px; background-position: center;">
-              
+            <table width="826" cellpadding="0" cellspacing="0" border="0" style="max-width: 826px; width: 100%; background-color: #000000; background-image: url('${baseUrl}/assets/email/hope%20pattern.png'); background-repeat: no-repeat; background-size: cover; background-position: center; opacity: 1;">
+              <!-- Overlay for opacity effect -->
+              <tr>
+                <td style="background-color: rgba(0, 0, 0, 0.5); width: 100%;">
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
               <!-- Logo Section -->
               <tr>
                 <td align="center" style="padding: 70px 60px 50px 60px;">
@@ -256,7 +259,7 @@ const sendOtpEmail = async (toEmail: string, toName: string, otp: string): Promi
                           <tr>
                             ${otpDigits.map(digit => `
                               <td style="padding: 0 9px;">
-                                <table cellpadding="0" cellspacing="0" border="0" style="background: #234567; width: 95px; height: 120px; border-radius: 12px;">
+                                <table cellpadding="0" cellspacing="0" border="0" style="background: #192b58; width: 95px; height: 120px; border-radius: 0;">
                                   <tr>
                                     <td align="center" valign="middle" style="text-align: center; vertical-align: middle;">
                                       <span style="font-size: 70px; font-weight: bold; color: #ffffff; font-family: Arial, Helvetica, sans-serif; line-height: 1; display: block;">${digit}</span>
@@ -297,6 +300,9 @@ const sendOtpEmail = async (toEmail: string, toName: string, otp: string): Promi
                 </td>
               </tr>
               
+                  </table>
+                </td>
+              </tr>
             </table>
           </td>
         </tr>
